@@ -8,4 +8,27 @@ def main(s1,s2,s3):
     Returns:
         string
     """
-    return
+    ls1  =  len ( s1 )
+    ls2  =  len ( s2 )
+    ls3  =  len ( s3 )
+
+    if ls1 % 2 > 0 and ls2 % 2 > 0 and ls3 % 2 > 0:
+        return f"[{s1}, {s2}, {s3}]"
+
+    if ls1 % 2 > 0 and ls2 % 2 > 0 and ls3 % 2 <= 0:
+        return f"[{s1}, {s2}]"
+
+    if ls1 % 2 > 0 and ls2 % 2 <= 0 and ls3 % 2 <= 0:
+        return f"[{s1}]"
+
+    if ls1 % 2 <= 0 and ls2 % 2 > 0 and ls3 % 2 <= 0:
+        return f"[{s2}]"
+
+    if ls1 % 2 <= 0 and ls2 % 2 <= 0 and ls3 % 2 > 0:
+        return f"[{s3}]"
+
+    if ls1 % 2 > 0 and ls2 % 2 <= 0 and ls3 % 2 > 0:
+        return f"[{s1}, {s3}]"
+
+    if ls1 % 2 <= 0 and ls2 % 2 > 0 and ls3 % 2 > 0:
+        return f"[{s2}, {s3}]"
